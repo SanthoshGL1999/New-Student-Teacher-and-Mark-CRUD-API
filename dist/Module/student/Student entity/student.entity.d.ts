@@ -10,6 +10,6 @@ export declare class STUDENTINFO {
     MARK_ID: number;
     TEACHER_ID: number;
     CLASS: number;
-    teacher: TEACHERINFO[];
-    mark: MARKS[];
+    teacher: TEACHERINFO;
+    mark: MARKS;
 }

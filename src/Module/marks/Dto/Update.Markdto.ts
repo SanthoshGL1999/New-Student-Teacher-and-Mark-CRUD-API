@@ -7,25 +7,30 @@ export class UpdateMarkDto{
     @IsNumber()
     @IsNotEmpty()
     @IsOptional()
-    TAMIL?: number
+    TAMIL: number
 
     @IsNumber()
     @IsNotEmpty()
     @IsOptional()
-    ENGLISH?: number;
+    ENGLISH: number;
 
     @IsNumber()
     @IsNotEmpty()
     @IsOptional()
-    MATHS?: number;
+    MATHS: number;
 
     @IsNumber()
     @IsNotEmpty()
     @IsOptional()
-    SCIENCE?: number;
+    SCIENCE: number;
 
     @IsNumber()
     @IsNotEmpty()
     @IsOptional()
-    SOCIAL_SCIENCE?: number;
+    SOCIAL_SCIENCE: number;
+
+    @IsNumber()
+    @IsNotEmpty()
+    @IsOptional()
+    MARK_ID?: number;
 }

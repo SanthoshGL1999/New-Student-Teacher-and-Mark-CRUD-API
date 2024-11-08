@@ -44,4 +44,10 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
 ], UpdateMarkDto.prototype, "SOCIAL_SCIENCE", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Number)
+], UpdateMarkDto.prototype, "MARK_ID", void 0);
 //# sourceMappingURL=Update.Markdto.js.map

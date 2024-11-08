@@ -32,8 +32,9 @@ export class STUDENTINFO{
     CLASS: number;
 
     @ManyToMany(()=>TEACHERINFO,(teacher)=>teacher.student)
-    teacher: TEACHERINFO[];
-    @OneToMany(()=>MARKS,(mark)=>mark.student)
-    mark: MARKS[];
+    teacher: TEACHERINFO;
+    @OneToMany(()=> MARKS,(mark)=> mark.student)
+    mark: MARKS;
 
+    
 }

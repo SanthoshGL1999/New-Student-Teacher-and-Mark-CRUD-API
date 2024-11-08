@@ -1,7 +1,8 @@
 import { STUDENTINFO } from "src/Module/student/Student entity/student.entity";
-import { Column, JoinColumn, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { TEACHERINFO } from "src/Module/teacher/teacher entity/teacher.entity";
+import { Column, Entity, JoinColumn, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
-
+@Entity()
 export class MARKS{
     @PrimaryGeneratedColumn()
     id: number;
@@ -21,7 +22,7 @@ export class MARKS{
     @Column()
     SOCIAL_SCIENCE: number;
 
-    @ManyToOne(() => STUDENTINFO, (student) => student.mark)
-    @JoinColumn({name: 'student'})
+    @ManyToOne(()=> STUDENTINFO,(student)=> student.mark)
     student: STUDENTINFO;
+
 }

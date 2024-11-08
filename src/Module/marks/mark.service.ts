@@ -3,14 +3,15 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { MARKS } from './Entity/mark.entity';
 import { Repository } from 'typeorm';
 import { STUDENTINFO } from '../student/Student entity/student.entity';
-import { promises } from 'dns';
 import { CreateMarkDto } from './Dto/Create.Markdto';
 import { UpdateMarkDto } from './Dto/Update.Markdto';
 
 @Injectable()
 export class MarkService {
-    constructor(@InjectRepository(MARKS) private marksRepository: Repository<MARKS>,
-                @InjectRepository(STUDENTINFO)private studentRepository: Repository<STUDENTINFO>,
+    constructor(@InjectRepository(MARKS)
+                private marksRepository: Repository<MARKS>,
+                @InjectRepository(STUDENTINFO) 
+                private studentRepository: Repository<STUDENTINFO>,
                 ){}
 
         findAll(): Promise<MARKS[]>{

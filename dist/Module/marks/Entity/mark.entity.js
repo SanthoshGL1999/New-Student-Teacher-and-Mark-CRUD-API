@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MARKS = void 0;
 const student_entity_1 = require("../../student/Student entity/student.entity");
 const typeorm_1 = require("typeorm");
-class MARKS {
-}
+let MARKS = class MARKS {
+};
 exports.MARKS = MARKS;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
@@ -41,7 +41,9 @@ __decorate([
 ], MARKS.prototype, "SOCIAL_SCIENCE", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => student_entity_1.STUDENTINFO, (student) => student.mark),
-    (0, typeorm_1.JoinColumn)({ name: 'student' }),
     __metadata("design:type", student_entity_1.STUDENTINFO)
 ], MARKS.prototype, "student", void 0);
+exports.MARKS = MARKS = __decorate([
+    (0, typeorm_1.Entity)()
+], MARKS);
 //# sourceMappingURL=mark.entity.js.map

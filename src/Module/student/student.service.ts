@@ -5,6 +5,7 @@ import { Repository } from 'typeorm';
 import { TEACHERINFO } from '../teacher/teacher entity/teacher.entity';
 import { CreateStudentDto } from './StudentDto/Create.Studentdto';
 import { UpdateStudentDto } from './StudentDto/Update.Studentdto';
+import { MARKS } from '../marks/Entity/mark.entity';
 
 @Injectable()
 export class StudentService {
@@ -13,6 +14,8 @@ export class StudentService {
         private studentRepository: Repository<STUDENTINFO>,
         @InjectRepository(TEACHERINFO)
         private teacherRepository: Repository<TEACHERINFO>,
+        @InjectRepository(MARKS)
+        private markRepository: Repository<MARKS>,
     ) {}
 
     findAll(): Promise<STUDENTINFO[]> {
